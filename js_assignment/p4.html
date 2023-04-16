@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Program 4</title>
+</head>
+<body>
+    <script>
+const numbers = [3, 6, 1, 8, 2, 10];
+
+function nthLargest(arr, n) {
+  // Sort the array in descending order
+  arr.sort((a, b) => b - a);
+  // Return the nth largest element
+  return arr[n - 1];
+}
+
+// Call the function and log the result to the console
+alert(nthLargest(numbers, 2)); 
+
+    </script>
+</body>
+</html>

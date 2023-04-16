@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Program 2</title>
+</head>
+<body>
+    <h1>Check in console.log</h1>
+    <script>
+
+const students = [
+  { name: 'Vishwas', usn: 122 },
+  { name: 'Sanjana', usn: 092 },
+  { name: 'Rohan', usn: 111 },
+  { name: 'Rachana', usn: 085 }
+];
+
+const propertyToSortBy = 'usn';
+
+students.sort((a, b) => a[propertyToSortBy] - b[propertyToSortBy]);
+
+console.log(students);
+
+    </script>
+</body>
+</html>
