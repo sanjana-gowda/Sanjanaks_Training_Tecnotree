@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(212, 140, 248);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 10%;
+  align-items: center;
+  text-align: center;
+  background-image: url("C:\Users\gowdasa\Downloads\a1.jpg");
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+h1 {
+  color: rgb(17, 16, 16);
+}
