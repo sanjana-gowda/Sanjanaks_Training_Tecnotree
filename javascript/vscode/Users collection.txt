@@ -1,0 +1,62 @@
+                                                              TRAVEL BLOGGING APPLICATION
+
+This could be designed in the 3 formates as follows:
+
+// Users collection
+{
+  _id: ObjectId("ss102"),
+  name: "sanjana",
+  email: "sanj@gmail.com",
+  password: "sanjan@21"
+}
+
+// BlogPosts collection
+{
+  _id: ObjectId("ss102"),
+  title: "My Trip to Paris",
+  content: "this is my dream place",
+  createdAt: ISODate("2-03-2023"),
+  author: ObjectId("ss102"),
+  destination: ObjectId("ss102")
+}
+
+// Destinations collection
+{
+  _id: ObjectId("ss102"),
+  name: "Paris",
+  description: "The city of love and lights"
+}
+
+
+                                                                    ER DIAGRAM
+
++-------------+             +---------------+          +----------------+
+|   Users     |             |   BlogPosts   |          |   Destinations |
++-------------+             +---------------+          +----------------+
+| _id         |1           *| _id           |          | _id            |
+| name        |-------------| title         |          | name           |
+| email       |             | content       |1        *| description    |
+| password    |             | createdAt     |----------|                |
++-------------+             | author ------ |          |                |
+                            | destination --|--------->|                |
+                            +---------------+          +----------------+
+
+
+
+Entities:
+
+Users
+BlogPosts
+Destinations
+
+Relationships:
+
+One User can write many BlogPosts (one-to-many)
+Each BlogPost has one Author, which is a User (many-to-one)
+Many BlogPosts can be written about one Destination (many-to-one)
+Each BlogPost has one Destination (many-to-one)
+
+
+relationships:
+
+Users (1) ----< BlogPosts (*) >---- (1) Destinations

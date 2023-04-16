@@ -1,0 +1,2 @@
+Atlas AWS Account ARN: arn:aws:iam::536727724300:root 
+Your unique External ID: f920c8c5-0aef-4c29-9a71-3317a81aca9d

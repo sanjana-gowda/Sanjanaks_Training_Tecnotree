@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Technical Documentation</title>
+  <link rel="stylesheet" href="style.css">
+  <style> body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  nav {
+    flex: 1;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-bottom: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav a:hover {
+    color: #000;
+  }
+  
+  main {
+    flex: 3;
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  const links = document.querySelectorAll('nav a');
+  const sections = document.querySelectorAll('section');
+  
+  function setActiveLink() {
+    const current = window.location.hash;
+    links.forEach(link => {
+      if (link.hash === current) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+  
+  function showSection() {
+    const current = window.location.hash;
+    sections.forEach(section => {
+      if ('#' + section.id === current) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
+    });
+  }
+  
+  window.addEventListener('hashchange', () => {
+    setActiveLink();
+    showSection();
+  });
+  
+  setActiveLink();
+  showSection();</style>
+</head>
+<body>
+   
+                
+  <header>
+    <h1>Technical Documentation</h1>
+  </header>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#topic1">Topic 1</a></li>
+        <li><a href="#topic2">Topic 2</a></li>
+        <li><a href="#topic3">Topic 3</a></li>
+        <li><a href="#topic4">Topic 4</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="topic1">
+        <h2>Topic 1</h2>
+        <p>Content for topic 1 goes here.</p>
+      </section>
+      <section id="topic2">
+        <h2>Topic 2</h2>
+        <p>Content for topic 2 goes here.</p>
+      </section>
+      <section id="topic3">
+        <h2>Topic 3</h2>
+        <p>Content for topic 3 goes here.</p>
+      </section>
+      <section id="topic4">
+        <h2>Topic 4</h2>
+        <p>Content for topic 4 goes here.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

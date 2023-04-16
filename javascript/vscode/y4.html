@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tribute Page</title>
+	<link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        blockquote {
+            margin: 0;
+            font-style: italic;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+	<header>
+		<h1>Tribute to Albert Einstein</h1>
+	</header>
+	<main>
+        
+        
+		<section id="tribute-info">
+			<h2>Who is Albert Einstein?</h2>
+			<img src="einstein.jpg" alt="Picture of Albert Einstein">
+			<p>Albert Einstein was a German-born physicist who developed the theory of relativity. He is considered one of the most influential scientists of the 20th century and his work had a major impact on the development of atomic energy.</p>
+		</section>
+		<section id="tribute-achievements">
+			<h2>Major Achievements</h2>
+			<ul>
+				<li>Developed the theory of relativity</li>
+				<li>Published the famous equation E=mc²</li>
+				<li>Received the Nobel Prize in Physics in 1921</li>
+			</ul>
+		</section>
+		<section id="tribute-quotes">
+			<h2>Famous Quotes</h2>
+			<blockquote>"Imagination is more important than knowledge."</blockquote>
+			<blockquote>"The important thing is not to stop questioning. Curiosity has its own reason for existing."</blockquote>
+		</section>
+	</main>
+    <script>const button = document.getElementById('change-color');
+        const body = document.querySelector('body');
+        
+        button.addEventListener('click', () => {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#00ffff', '#ff00ff'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            body.style.backgroundColor = randomColor;
+        });
+        </script>
+	<footer>
+		<button id="change-color">Change Background Color</button>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

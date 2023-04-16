@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>html page</title>
+  </head>
+  <body>
+    <p id="para">hello</p>
+    <button id="button">Click me</button>
+    <button id="second-button">Click me too</button>
+
+    <script>
+      
+      const myButton = document.getElementById("button");
+      const myOtherButton = document.getElementById("second-button");
+      const myParagraph = document.getElementById("para");
+
+     
+      myButton.addEventListener("click", function() {
+       
+        myParagraph.textContent = "The first button was clicked!";
+      });
+
+      myOtherButton.addEventListener("click", function() {
+        
+        myParagraph.textContent = "The second button was clicked!";
+      });
+    </script>
+  </body>
+</html>
