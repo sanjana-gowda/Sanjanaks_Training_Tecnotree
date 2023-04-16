@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Program 1</title>
+</head>
+<body>
+    <script>
+function intersection(array1, array2) {
+  return array1.filter(value => array2.includes(value));
+}
+
+
+function intersection2(array1, array2) {
+  const result = [];
+
+  for (let i = 0; i < array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+      if (array1[i] === array2[j]) {
+        result.push(array1[i]);
+        break;
+      }
+    }
+  }
+
+  return result;
+}
+
+// Example usage
+const array1 = [10, 20, 30, 40];
+const array2 = [40, 5, 60, 10];
+
+const result1 = intersection(array1, array2);
+const result2 = intersection2(array1, array2);
+
+alert(result1); 
+alert(result2); 
+
+    </script>
+</body>
+</html>
